@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNN MOVIE LK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 BNN MOVIE LK</h1>
+        <p>Search for your favorite movies</p>
+    </header>
+
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Search for a movie...">
+        <button id="searchBtn">Search</button>
+    </section>
+
+    <section class="category-tabs">
+        <button class="tab-btn active" data-category="popular">Popular</button>
+        <button class="tab-btn" data-category="now_playing">Now showing</button>
+        <button class="tab-btn" data-category="top_rated">Top rated</button>
+        <button class="tab-btn" data-category="upcoming">Upcoming</button>
+        <button class="tab-btn" data-category="free">🎁 Free Movies</button>
+    </section>
+
+    <main id="movieContainer" class="movie-grid"></main>
+
+    <!-- Modal for movie details / player -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- TMDB Attribution Footer -->
+    <footer class="site-footer">
+        <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded604ef09b136fe3fec72548ebc1fea3fbbd1ad9b364535ef11.svg" alt="TMDB Logo" class="tmdb-logo" onerror="this.style.display='none'">
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+        <p style="margin-top:8px;font-size:0.8rem;">Free movies are provided legally via Internet Archive (Public Domain).</p>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
