@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieAndGameZoneByBNN</title>
+    <link rel="stylesheet" href="style.css?v=12">
+</head>
+<body>
+    <header class="topbar">
+        <button id="menuBtn" class="icon-btn">☰</button>
+        <div class="brand">
+            <img src="logo.png" alt="BNN Logo" class="site-logo" onerror="this.style.display='none'">
+            <span>MovieAndGameZone<span>ByBNN</span></span>
+        </div>
+        <div class="top-actions">
+            <button id="themeToggle" class="icon-btn">🌙</button>
+            <button id="searchToggle" class="icon-btn">🔍</button>
+        </div>
+    </header>
+
+    <div id="searchBar" class="search-bar hidden">
+        <input type="text" id="searchInput" placeholder="චිත්‍රපටයක් / TV / Anime / Game / Cartoon එකක් සොයන්න...">
+        <button id="searchBtn">සොයන්න</button>
+    </div>
+
+    <nav id="sideMenu" class="side-menu hidden">
+        <button class="menu-item" data-action="movies">🎬 All Movies</button>
+        <button class="menu-item" data-action="tvseries">📺 TV Series</button>
+        <button class="menu-item" data-action="anime">🎌 Anime (Latest)</button>
+        <button class="menu-item" data-action="cartoons">🎨 All Cartoons</button>
+        <button class="menu-item" data-action="cartoons_classic">🐰 Classic Cartoons</button>
+        <button class="menu-item" data-action="cartoons_superhero">🦸 Superhero Cartoons</button>
+        <button class="menu-item" data-action="cartoons_asian">🌏 Asian / Sri Lankan Animation</button>
+        <button class="menu-item" data-action="cartoons_series">📺 Cartoon Series (Episodes)</button>
+        <button class="menu-item" data-action="gamesplay">🎮 Retro Games (Play Here)</button>
+        <button class="menu-item" data-action="gamesfree">🎮 Free Games (Download)</button>
+        <button class="menu-item" data-action="gamesworld">🌍 World Free Games (All-in-One)</button>
+        <button class="menu-item" data-action="itchio">🎮 itch.io Free Games</button>
+        <button class="menu-item" data-action="stores">🛒 Free Game Stores (Official)</button>
+        <button class="menu-item" data-action="platforms">🌐 Free Legal Platforms</button>
+        <button class="menu-item" data-action="today">🆕 Today's New Releases</button>
+        <button class="menu-item" data-action="daily">🆕 New Free Additions (Daily)</button>
+        <button class="menu-item" data-action="free">🎁 Free Movies (Public Domain)</button>
+        <details class="menu-group">
+            <summary>🌐 Languages</summary>
+            <div class="sub-items">
+                <button class="sub-item" data-lang="si">සිංහල (Sinhala)</button>
+                <button class="sub-item" data-lang="ta">தமிழ் (Tamil)</button>
+                <button class="sub-item" data-lang="hi">हिन्दी (Hindi)</button>
+                <button class="sub-item" data-lang="en">English</button>
+            </div>
+        </details>
+        <details class="menu-group">
+            <summary>📁 Genres</summary>
+            <div class="sub-items" id="genreList"></div>
+        </details>
+        <button class="menu-item" data-action="years">📅 Years</button>
+    </nav>
+
+    <main>
+        <h2 id="sectionTitle" class="section-title">Recently Added</h2>
+        <div id="movieContainer" class="movie-grid"></div>
+
+        <section id="yearsSection" class="years-section">
+            <h2 class="section-title">Release Year</h2>
+            <div id="yearsGrid" class="years-grid"></div>
+        </section>
+
+        <!-- BNN NETWORK Announcement -->
+        <section class="announce">
+            <div class="announce-box">
+                <h3>🚀 MovieAndGameZoneByBNN UPDATE! 🚀 🇱🇰</h3>
+                <p>අපේ Group Links, Channel Links සහ අලුත්ම Updates ඔක්කොම තියෙන්නේ අපේ Official Website එකේ! 👇</p>
+                <p>👉 ඔයාලට පුළුවන් Site එකට ගිහින් අපේ WhatsApp Group / Channel / Community වලට Join වෙලා, අලුත්ම Updates දැනගන්න!</p>
+                <p>🔗 <a href="http://www.bnnnetworkofcsite.abrdns.com" target="_blank">www.bnnnetworkofcsite.abrdns.com</a></p>
+                <p>🔗 <a href="https://raveendraabesiriwardana-lgtm.github.io/WWW.BNNNETWORK.LK/?v=99" target="_blank">Link 2 — WWW.BNNNETWORK.LK</a></p>
+                <p>අනිවාර්යයෙන්ම හැමෝම ගිහින් බලන්න! ❤️</p>
+            </div>
+            <div class="announce-box">
+                <h3>🚀 MovieAndGameZoneByBNN OFFICIAL UPDATE! 🚀 🌍</h3>
+                <p>All our Group Links, Channels & Latest Updates are now available on our Official Website! 👇</p>
+                <p>✨ Visit our site to join our WhatsApp Group / Channel / Community and never miss an update!</p>
+                <p>🔗 <a href="http://www.bnnnetworkofcsite.abrdns.com" target="_blank">www.bnnnetworkofcsite.abrdns.com</a></p>
+                <p>🔗 <a href="https://raveendraabesiriwardana-lgtm.github.io/WWW.BNNNETWORK.LK/?v=99" target="_blank">Link 2 — WWW.BNNNETWORK.LK</a></p>
+                <p>Don't forget to check it out everyone! 🔥</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="social-btn fb" href="https://www.facebook.com/profile.php?id=61595508831313&mibextid=ZbWKwL" target="_blank">Facebook Page</a>
+        <a class="social-btn tg" href="https://t.me/BNNNETWORKs3" target="_blank">Telegram Group</a>
+        <a class="social-btn yt" href="https://www.youtube.com/@BNNNETWORKOFC1" target="_blank">YouTube Channel</a>
+        <p class="attr">© 2026 MovieAndGameZoneByBNN</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js?v=12"></script>
+</body>
+  </html>
